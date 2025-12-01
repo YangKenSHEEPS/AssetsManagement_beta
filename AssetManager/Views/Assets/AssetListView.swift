@@ -5,10 +5,12 @@ struct AssetListView: View {
     @StateObject var viewModel: AssetListViewModel
     @Environment(\.modelContext) private var context
     @Environment(\.scenePhase) private var scenePhase
+    @EnvironmentObject var appState: AppState
     @State private var showForm = false
     @State private var showDeleteConfirm = false
     @State private var showScrapConfirm = false
     @State private var editMode: EditMode = .inactive
+    @State private var showLogoutConfirm = false
 
     var body: some View {
         NavigationStack {
@@ -40,10 +42,19 @@ struct AssetListView: View {
                     EditButton()
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showForm = true
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
+                    HStack {
+                        Button {
+                            showForm = true
+                        } label: {
+                            Image(systemName: "plus.circle.fill")
+                        }
+                        Menu {
+                            Button("退出登录", role: .destructive) {
+                                showLogoutConfirm = true
+                            }
+                        } label: {
+                            Image(systemName: "ellipsis.circle")
+                        }
                     }
                 }
             }
@@ -64,6 +75,10 @@ struct AssetListView: View {
                 Button("知道了", role: .cancel) { }
             } message: {
                 Text(viewModel.errorMessage ?? "")
+            }
+            .confirmationDialog("确认退出登录？", isPresented: $showLogoutConfirm) {
+                Button("退出", role: .destructive) { appState.logout() }
+                Button("取消", role: .cancel) {}
             }
         }
     }

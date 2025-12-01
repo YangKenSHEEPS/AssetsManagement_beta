@@ -3,6 +3,7 @@ import SwiftData
 
 struct MainTabView: View {
     @Environment(\.modelContext) private var context
+    @EnvironmentObject var appState: AppState
 
     var body: some View {
         TabView {
@@ -22,6 +23,7 @@ struct MainTabView: View {
                 }
 
             SettingsView()
+                .environmentObject(appState)
                 .tabItem {
                     Label("设置", systemImage: "gearshape")
                 }
