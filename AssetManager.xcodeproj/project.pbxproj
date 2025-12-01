@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA0000000000000000000200 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000100 /* App.swift */; };
+		AA0000000000000000000201 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000101 /* MainTabView.swift */; };
+		AA0000000000000000000202 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000102 /* Asset.swift */; };
+		AA0000000000000000000203 /* AssetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000103 /* AssetRepository.swift */; };
+		AA0000000000000000000204 /* QRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000104 /* QRService.swift */; };
+		AA0000000000000000000205 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000105 /* PhotoService.swift */; };
+		AA0000000000000000000206 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000106 /* ExportService.swift */; };
+		AA0000000000000000000207 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000107 /* AuthService.swift */; };
+		AA0000000000000000000208 /* AssetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000108 /* AssetListViewModel.swift */; };
+		AA0000000000000000000209 /* AssetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000109 /* AssetDetailViewModel.swift */; };
+		AA0000000000000000000210 /* AssetFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000110 /* AssetFormViewModel.swift */; };
+		AA0000000000000000000211 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000111 /* ScanViewModel.swift */; };
+		AA0000000000000000000212 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000112 /* AdminViewModel.swift */; };
+		AA0000000000000000000213 /* AssetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000113 /* AssetListView.swift */; };
+		AA0000000000000000000214 /* AssetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000114 /* AssetDetailView.swift */; };
+		AA0000000000000000000215 /* AssetFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000115 /* AssetFormView.swift */; };
+		AA0000000000000000000216 /* QRPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000116 /* QRPreviewView.swift */; };
+		AA0000000000000000000217 /* ScanCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000117 /* ScanCameraView.swift */; };
+		AA0000000000000000000218 /* ScanTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000118 /* ScanTabView.swift */; };
+		AA0000000000000000000219 /* ScanResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000119 /* ScanResultView.swift */; };
+		AA0000000000000000000220 /* AdminHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000120 /* AdminHomeView.swift */; };
+		AA0000000000000000000221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000121 /* Assets.xcassets */; };
+		AA0000000000000000000222 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000122 /* Preview Assets.xcassets */; };
+		AA0000000000000000000223 /* AssetManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000124 /* AssetManagerTests.swift */; };
+		AA0000000000000000000224 /* AssetNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000125 /* AssetNumberGenerator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA0000000000000000000500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0000000000000000000006;
+			remoteInfo = AssetManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA0000000000000000000008 /* AssetManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000009 /* AssetManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssetManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000100 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		AA0000000000000000000101 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000102 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		AA0000000000000000000103 /* AssetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRepository.swift; sourceTree = "<group>"; };
+		AA0000000000000000000104 /* QRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000105 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000106 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000107 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		AA0000000000000000000108 /* AssetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListViewModel.swift; sourceTree = "<group>"; };
+		AA0000000000000000000109 /* AssetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailViewModel.swift; sourceTree = "<group>"; };
+		AA0000000000000000000110 /* AssetFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetFormViewModel.swift; sourceTree = "<group>"; };
+		AA0000000000000000000111 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
+		AA0000000000000000000112 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
+		AA0000000000000000000113 /* AssetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetListView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000114 /* AssetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000115 /* AssetFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetFormView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000116 /* QRPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRPreviewView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000117 /* ScanCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCameraView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000118 /* ScanTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanTabView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000119 /* ScanResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000120 /* AdminHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA0000000000000000000122 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA0000000000000000000123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA0000000000000000000124 /* AssetManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetManagerTests.swift; sourceTree = "<group>"; };
+		AA0000000000000000000125 /* AssetNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetNumberGenerator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA0000000000000000000300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0000000000000000000301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA0000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000003 /* AssetManager */,
+				AA0000000000000000000004 /* AssetManagerTests */,
+				AA0000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000003 /* AssetManager */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000400 /* Models */,
+				AA0000000000000000000401 /* Repositories */,
+				AA0000000000000000000402 /* Services */,
+				AA0000000000000000000403 /* ViewModels */,
+				AA0000000000000000000404 /* Views */,
+				AA0000000000000000000405 /* Resources */,
+				AA0000000000000000000406 /* Supporting */,
+				AA0000000000000000000407 /* Utilities */,
+				AA0000000000000000000100 /* App.swift */,
+				AA0000000000000000000101 /* MainTabView.swift */,
+			);
+			path = AssetManager;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000004 /* AssetManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000124 /* AssetManagerTests.swift */,
+			);
+			path = AssetManagerTests;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000008 /* AssetManager.app */,
+				AA0000000000000000000009 /* AssetManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000400 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000102 /* Asset.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000401 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000103 /* AssetRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000402 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000104 /* QRService.swift */,
+				AA0000000000000000000105 /* PhotoService.swift */,
+				AA0000000000000000000106 /* ExportService.swift */,
+				AA0000000000000000000107 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000403 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000108 /* AssetListViewModel.swift */,
+				AA0000000000000000000109 /* AssetDetailViewModel.swift */,
+				AA0000000000000000000110 /* AssetFormViewModel.swift */,
+				AA0000000000000000000111 /* ScanViewModel.swift */,
+				AA0000000000000000000112 /* AdminViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000404 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000410 /* Assets */,
+				AA0000000000000000000411 /* Admin */,
+				AA0000000000000000000412 /* QR */,
+				AA0000000000000000000413 /* Scan */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000405 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000121 /* Assets.xcassets */,
+				AA0000000000000000000122 /* Preview Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000406 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000123 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000407 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000125 /* AssetNumberGenerator.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000410 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000113 /* AssetListView.swift */,
+				AA0000000000000000000114 /* AssetDetailView.swift */,
+				AA0000000000000000000115 /* AssetFormView.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000411 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000120 /* AdminHomeView.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000412 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000116 /* QRPreviewView.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000413 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000117 /* ScanCameraView.swift */,
+				AA0000000000000000000118 /* ScanTabView.swift */,
+				AA0000000000000000000119 /* ScanResultView.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0000000000000000000006 /* AssetManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000010 /* Build configuration list for PBXNativeTarget "AssetManager" */;
+			buildPhases = (
+				AA0000000000000000000302 /* Sources */,
+				AA0000000000000000000300 /* Frameworks */,
+				AA0000000000000000000303 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AssetManager;
+			productName = AssetManager;
+			productReference = AA0000000000000000000008 /* AssetManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA0000000000000000000007 /* AssetManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000012 /* Build configuration list for PBXNativeTarget "AssetManagerTests" */;
+			buildPhases = (
+				AA0000000000000000000304 /* Sources */,
+				AA0000000000000000000301 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA0000000000000000000501 /* PBXTargetDependency */,
+			);
+			name = AssetManagerTests;
+			productName = AssetManagerTests;
+			productReference = AA0000000000000000000009 /* AssetManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AA0000000000000000000007 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = AA0000000000000000000011 /* Build configuration list for PBXProject "AssetManager" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0000000000000000000002;
+			productRefGroup = AA0000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0000000000000000000006 /* AssetManager */,
+				AA0000000000000000000007 /* AssetManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0000000000000000000303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000221 /* Assets.xcassets in Resources */,
+				AA0000000000000000000222 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0000000000000000000302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000200 /* App.swift in Sources */,
+				AA0000000000000000000201 /* MainTabView.swift in Sources */,
+				AA0000000000000000000202 /* Asset.swift in Sources */,
+				AA0000000000000000000203 /* AssetRepository.swift in Sources */,
+				AA0000000000000000000204 /* QRService.swift in Sources */,
+				AA0000000000000000000205 /* PhotoService.swift in Sources */,
+				AA0000000000000000000206 /* ExportService.swift in Sources */,
+				AA0000000000000000000207 /* AuthService.swift in Sources */,
+				AA0000000000000000000208 /* AssetListViewModel.swift in Sources */,
+				AA0000000000000000000209 /* AssetDetailViewModel.swift in Sources */,
+				AA0000000000000000000210 /* AssetFormViewModel.swift in Sources */,
+				AA0000000000000000000211 /* ScanViewModel.swift in Sources */,
+				AA0000000000000000000212 /* AdminViewModel.swift in Sources */,
+				AA0000000000000000000213 /* AssetListView.swift in Sources */,
+				AA0000000000000000000214 /* AssetDetailView.swift in Sources */,
+				AA0000000000000000000215 /* AssetFormView.swift in Sources */,
+				AA0000000000000000000216 /* QRPreviewView.swift in Sources */,
+				AA0000000000000000000217 /* ScanCameraView.swift in Sources */,
+				AA0000000000000000000218 /* ScanTabView.swift in Sources */,
+				AA0000000000000000000219 /* ScanResultView.swift in Sources */,
+				AA0000000000000000000220 /* AdminHomeView.swift in Sources */,
+				AA0000000000000000000224 /* AssetNumberGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0000000000000000000304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000223 /* AssetManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA0000000000000000000501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0000000000000000000006 /* AssetManager */;
+			targetProxy = AA0000000000000000000500 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AA0000000000000000000013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CAK5GA86N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AssetManager/Supporting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangken.AssetManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2CAK5GA86N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = AssetManager/Supporting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangken.AssetManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA0000000000000000000015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AssetManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AA0000000000000000000016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.AssetManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AA0000000000000000000017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0000000000000000000010 /* Build configuration list for PBXNativeTarget "AssetManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000013 /* Debug */,
+				AA0000000000000000000014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AA0000000000000000000011 /* Build configuration list for PBXProject "AssetManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000017 /* Debug */,
+				AA0000000000000000000018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AA0000000000000000000012 /* Build configuration list for PBXNativeTarget "AssetManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000015 /* Debug */,
+				AA0000000000000000000016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA0000000000000000000001 /* Project object */;
+}
