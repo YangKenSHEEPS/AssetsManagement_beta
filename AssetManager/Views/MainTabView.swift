@@ -20,6 +20,11 @@ struct MainTabView: View {
                 .tabItem {
                     Label("后台", systemImage: "slider.horizontal.3")
                 }
+
+            SettingsView()
+                .tabItem {
+                    Label("设置", systemImage: "gearshape")
+                }
         }
     }
 }

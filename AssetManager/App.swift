@@ -3,6 +3,7 @@ import SwiftData
 
 @main
 struct AssetManagerApp: App {
+    @StateObject private var appState = AppState()
     private let container: ModelContainer
 
     init() {
@@ -16,7 +17,8 @@ struct AssetManagerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            RootGateView()
+                .environmentObject(appState)
         }
         .modelContainer(container)
     }

@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "37273EC3-727A-4474-A709-971568F88F9D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:AssetManager.xcodeproj",
+      "identifier" : "AA0000000000000000000006",
+      "name" : "AssetManager"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:AssetManager.xcodeproj",
+        "identifier" : "AA0000000000000000000007",
+        "name" : "AssetManagerTests"
+      }
+    }
+  ],
+  "version" : 1
+}
