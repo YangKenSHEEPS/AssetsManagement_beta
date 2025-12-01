@@ -5,6 +5,7 @@ final class ScanViewModel: ObservableObject {
     @Published var parsedAsset: Asset?
     @Published var errorMessage: String?
     @Published var didCreate: Bool = false
+    @Published var selectedAsset: Asset?
 
     private let repository: AssetRepositoryType
     private let qrService: QRService

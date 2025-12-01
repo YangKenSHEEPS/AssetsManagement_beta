@@ -4,6 +4,7 @@ struct ScanResultView: View {
     let asset: Asset
     let isNew: Bool
     let onDone: () -> Void
+    let onDetail: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -16,6 +17,13 @@ struct ScanResultView: View {
             infoRow("报废年限", "\(asset.scrapYears) 年")
             infoRow("状态", asset.status.displayName, color: statusColor())
             Spacer()
+            Button {
+                onDetail()
+            } label: {
+                Label("查看资产详情", systemImage: "info.circle")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.bordered)
             Button("完成") { onDone() }
                 .buttonStyle(.borderedProminent)
                 .frame(maxWidth: .infinity)

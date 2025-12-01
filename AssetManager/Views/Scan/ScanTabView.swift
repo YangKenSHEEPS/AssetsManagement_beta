@@ -4,9 +4,11 @@ import UIKit
 
 struct ScanTabView: View {
     @StateObject var viewModel: ScanViewModel
+    @Environment(\.modelContext) private var context
     @State private var authorized = false
     @State private var showSettings = false
     @State private var navigate = false
+    @State private var showDetail = false
 
     var body: some View {
         NavigationStack {
@@ -40,10 +42,19 @@ struct ScanTabView: View {
             .navigationTitle("扫码")
             .navigationDestination(isPresented: $navigate) {
                 if let asset = viewModel.parsedAsset {
-                    ScanResultView(asset: asset, isNew: viewModel.didCreate) {
+                    ScanResultView(asset: asset, isNew: viewModel.didCreate, onDone: {
                         navigate = false
                         viewModel.parsedAsset = nil
-                    }
+                    }, onDetail: {
+                        navigate = false
+                        viewModel.selectedAsset = asset
+                        showDetail = true
+                    })
+                }
+            }
+            .navigationDestination(isPresented: $showDetail) {
+                if let asset = viewModel.selectedAsset {
+                    AssetDetailView(asset: asset, repository: AssetRepository(context: context))
                 }
             }
             .alert("提示", isPresented: Binding(

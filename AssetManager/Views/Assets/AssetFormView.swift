@@ -14,9 +14,12 @@ struct AssetFormView: View {
                         .keyboardType(.decimalPad)
                     DatePicker("购买日期", selection: $viewModel.purchaseDate, displayedComponents: .date)
                     DatePicker("登记日期", selection: $viewModel.registerDate, displayedComponents: .date)
-                    Stepper(value: $viewModel.scrapYears, in: 0...50) {
-                        Text("报废年限：\(viewModel.scrapYears) 年")
+                    Picker("报废年限", selection: $viewModel.scrapYears) {
+                        ForEach(0..<51) { year in
+                            Text("\(year) 年").tag(year)
+                        }
                     }
+                    .pickerStyle(.wheel) // 上下滑动选择年份
                     Picker("状态", selection: $viewModel.status) {
                         ForEach(AssetStatus.allCases) { status in
                             Text(status.displayName).tag(status)
