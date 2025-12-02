@@ -36,7 +36,7 @@ struct AssetListView: View {
                     batchToolbar
                 }
             }
-            .navigationTitle("资产")
+            .navigationTitle(NSLocalizedString("资产", comment: "tab"))
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
@@ -49,7 +49,7 @@ struct AssetListView: View {
                             Image(systemName: "plus.circle.fill")
                         }
                         Menu {
-                            Button("退出登录", role: .destructive) {
+                            Button(NSLocalizedString("退出登录", comment: ""), role: .destructive) {
                                 showLogoutConfirm = true
                             }
                         } label: {
@@ -84,7 +84,7 @@ struct AssetListView: View {
     }
 
     private var searchBar: some View {
-        TextField("搜索名称/序列号/负责人/地点", text: Binding(
+        TextField(NSLocalizedString("搜索名称/序列号/负责人/地点", comment: ""), text: Binding(
             get: { viewModel.filter.keyword },
             set: {
                 viewModel.filter.keyword = $0
@@ -99,7 +99,7 @@ struct AssetListView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 Menu {
-                    Button("全部") { viewModel.filter.status = nil; viewModel.load() }
+                    Button(NSLocalizedString("全部", comment: "")) { viewModel.filter.status = nil; viewModel.load() }
                     ForEach(AssetStatus.allCases) { status in
                         Button(status.displayName) {
                             viewModel.filter.status = status
@@ -107,7 +107,7 @@ struct AssetListView: View {
                         }
                     }
                 } label: {
-                    Label(viewModel.filter.status?.displayName ?? "状态", systemImage: "line.3.horizontal.decrease.circle")
+                    Label(viewModel.filter.status?.displayName ?? NSLocalizedString("状态", comment: ""), systemImage: "line.3.horizontal.decrease.circle")
                 }
 
                 Menu {
@@ -125,7 +125,7 @@ struct AssetListView: View {
                     viewModel.filter = AssetFilter()
                     viewModel.load()
                 } label: {
-                    Label("重置", systemImage: "arrow.counterclockwise")
+                    Label(NSLocalizedString("重置", comment: ""), systemImage: "arrow.counterclockwise")
                 }
             }
             .padding(.horizontal)
@@ -137,9 +137,9 @@ struct AssetListView: View {
         VStack(spacing: 12) {
             Image(systemName: "shippingbox")
                 .font(.system(size: 48))
-            Text("暂无资产")
+            Text(NSLocalizedString("暂无资产", comment: ""))
                 .font(.headline)
-            Button("去新增资产") {
+            Button(NSLocalizedString("去新增资产", comment: "")) {
                 showForm = true
             }
             .buttonStyle(.borderedProminent)
@@ -154,21 +154,21 @@ struct AssetListView: View {
                     Button(role: .destructive) {
                         showDeleteConfirm = true
                     } label: {
-                        Label("批量删除", systemImage: "trash")
+                        Label(NSLocalizedString("批量删除", comment: ""), systemImage: "trash")
                     }
-                    .confirmationDialog("确认删除选中资产？", isPresented: $showDeleteConfirm) {
-                        Button("删除", role: .destructive) { viewModel.bulkDelete() }
-                        Button("取消", role: .cancel) {}
+                    .confirmationDialog(NSLocalizedString("确认删除选中资产？", comment: ""), isPresented: $showDeleteConfirm) {
+                        Button(NSLocalizedString("删除", comment: ""), role: .destructive) { viewModel.bulkDelete() }
+                        Button(NSLocalizedString("取消", comment: ""), role: .cancel) {}
                     }
 
                     Button {
                         showScrapConfirm = true
                     } label: {
-                        Label("批量报废", systemImage: "exclamationmark.triangle")
+                        Label(NSLocalizedString("批量报废", comment: ""), systemImage: "exclamationmark.triangle")
                     }
-                    .confirmationDialog("标记为报废？", isPresented: $showScrapConfirm) {
-                        Button("报废", role: .destructive) { viewModel.bulkScrap() }
-                        Button("取消", role: .cancel) {}
+                    .confirmationDialog(NSLocalizedString("标记为报废？", comment: ""), isPresented: $showScrapConfirm) {
+                        Button(NSLocalizedString("报废", comment: ""), role: .destructive) { viewModel.bulkScrap() }
+                        Button(NSLocalizedString("取消", comment: ""), role: .cancel) {}
                     }
                 }
                 .padding(.horizontal)
@@ -185,21 +185,21 @@ struct AssetRowView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(asset.assetName)
                     .font(.headline)
-                Text("编号：\(asset.assetNumber)")
+                Text("\(NSLocalizedString("编号", comment: ""))：\(asset.assetNumber)")
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Text("￥\(asset.price, specifier: "%.2f") · \(asset.status.displayName)")
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 if let owner = asset.owner {
-                    Text("负责人：\(owner)")
+                    Text("\(NSLocalizedString("负责人", comment: ""))：\(owner)")
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
             }
             Spacer()
             VStack(alignment: .trailing) {
-                Text(asset.category ?? "未分类")
+                Text(asset.category ?? NSLocalizedString("未分类", comment: ""))
                     .font(.caption)
                     .padding(6)
                     .background(.blue.opacity(0.1))

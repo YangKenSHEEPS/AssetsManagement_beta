@@ -23,9 +23,9 @@ struct AssetDetailView: View {
             }
             .padding()
         }
-        .navigationTitle("资产详情")
+        .navigationTitle(NSLocalizedString("资产详情", comment: "Asset detail title"))
         .toolbar {
-            Button("编辑") { showForm = true }
+            Button(NSLocalizedString("编辑", comment: "Edit")) { showForm = true }
         }
         .sheet(isPresented: $showForm) {
             AssetFormView(viewModel: AssetFormViewModel(mode: .edit(asset), repository: repository)) { _ in
@@ -62,16 +62,16 @@ struct AssetDetailView: View {
 
     private var infoSection: some View {
         VStack(alignment: .leading, spacing: 8) {
-            labeledRow(title: "资产编号", value: asset.assetNumber)
-            labeledRow(title: "价格", value: String(format: "￥%.2f", asset.price))
-            labeledRow(title: "购买时间", value: asset.purchaseDate.formatted(date: .abbreviated, time: .omitted))
-            labeledRow(title: "登记时间", value: asset.registerDate.formatted(date: .abbreviated, time: .omitted))
-            labeledRow(title: "报废年限", value: "\(asset.scrapYears) 年")
-            if let category = asset.category { labeledRow(title: "分类", value: category) }
-            if let location = asset.location { labeledRow(title: "存放地点", value: location) }
-            if let owner = asset.owner { labeledRow(title: "负责人", value: owner) }
-            if let serial = asset.serialNumber { labeledRow(title: "序列号", value: serial) }
-            if let note = asset.note { labeledRow(title: "备注", value: note) }
+            labeledRow(title: NSLocalizedString("资产编号", comment: ""), value: asset.assetNumber)
+            labeledRow(title: NSLocalizedString("价格", comment: ""), value: String(format: "￥%.2f", asset.price))
+            labeledRow(title: NSLocalizedString("购买时间", comment: ""), value: asset.purchaseDate.formatted(date: .abbreviated, time: .omitted))
+            labeledRow(title: NSLocalizedString("登记时间", comment: ""), value: asset.registerDate.formatted(date: .abbreviated, time: .omitted))
+            labeledRow(title: NSLocalizedString("报废年限", comment: ""), value: "\(asset.scrapYears) \(NSLocalizedString("年", comment: ""))")
+            if let category = asset.category { labeledRow(title: NSLocalizedString("分类", comment: ""), value: category) }
+            if let location = asset.location { labeledRow(title: NSLocalizedString("存放地点", comment: ""), value: location) }
+            if let owner = asset.owner { labeledRow(title: NSLocalizedString("负责人", comment: ""), value: owner) }
+            if let serial = asset.serialNumber { labeledRow(title: NSLocalizedString("序列号", comment: ""), value: serial) }
+            if let note = asset.note { labeledRow(title: NSLocalizedString("备注", comment: ""), value: note) }
         }
         .padding()
         .background(.regularMaterial)
@@ -84,7 +84,7 @@ struct AssetDetailView: View {
                 viewModel.generateImage()
                 showQR = true
             } label: {
-                Label("生成二维码", systemImage: "qrcode")
+                Label(NSLocalizedString("生成二维码", comment: ""), systemImage: "qrcode")
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
@@ -96,7 +96,7 @@ struct AssetDetailView: View {
                     }
                 }
             } label: {
-                Label("更改状态", systemImage: "arrow.triangle.2.circlepath")
+                Label(NSLocalizedString("更改状态", comment: ""), systemImage: "arrow.triangle.2.circlepath")
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.bordered)

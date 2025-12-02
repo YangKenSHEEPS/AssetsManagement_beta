@@ -39,6 +39,7 @@
 		AA0000000000000000000229 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000130 /* LoginView.swift */; };
 		AA0000000000000000000230 /* StartAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000131 /* StartAuthView.swift */; };
 		AA0000000000000000000231 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000132 /* SettingsView.swift */; };
+		AA0000000000000000000232 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000135 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		AA0000000000000000000130 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000131 /* StartAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAuthView.swift; sourceTree = "<group>"; };
 		AA0000000000000000000132 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000133 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA0000000000000000000134 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C481A9212EDD648000A0AD04 /* AssetManager.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = AssetManager.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,8 +132,8 @@
 				AA0000000000000000000405 /* Resources */,
 				AA0000000000000000000406 /* Supporting */,
 				AA0000000000000000000407 /* Utilities */,
-				AA0000000000000000000408 /* Auth */,
-				AA0000000000000000000409 /* Settings */,
+				AA0000000000000000000408 /* Views/Auth */,
+				AA0000000000000000000409 /* Views/Settings */,
 				AA0000000000000000000100 /* App.swift */,
 				AA0000000000000000000101 /* MainTabView.swift */,
 			);
@@ -209,6 +212,7 @@
 			children = (
 				AA0000000000000000000121 /* Assets.xcassets */,
 				AA0000000000000000000122 /* Preview Assets.xcassets */,
+				AA0000000000000000000135 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -231,7 +235,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		AA0000000000000000000408 /* Auth */ = {
+		AA0000000000000000000408 /* Views/Auth */ = {
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000127 /* RegistrationView.swift */,
@@ -239,15 +243,15 @@
 				AA0000000000000000000130 /* LoginView.swift */,
 				AA0000000000000000000131 /* StartAuthView.swift */,
 			);
-			path = "Views/Auth";
+			path = Views/Auth;
 			sourceTree = "<group>";
 		};
-		AA0000000000000000000409 /* Settings */ = {
+		AA0000000000000000000409 /* Views/Settings */ = {
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000132 /* SettingsView.swift */,
 			);
-			path = "Views/Settings";
+			path = Views/Settings;
 			sourceTree = "<group>";
 		};
 		AA0000000000000000000410 /* Assets */ = {
@@ -344,6 +348,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = AA0000000000000000000002;
 			productRefGroup = AA0000000000000000000005 /* Products */;
@@ -363,6 +368,7 @@
 			files = (
 				AA0000000000000000000221 /* Assets.xcassets in Resources */,
 				AA0000000000000000000222 /* Preview Assets.xcassets in Resources */,
+				AA0000000000000000000232 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +428,18 @@
 			targetProxy = AA0000000000000000000500 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA0000000000000000000135 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA0000000000000000000133 /* en */,
+				AA0000000000000000000134 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AA0000000000000000000013 /* Debug */ = {

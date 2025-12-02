@@ -11,10 +11,10 @@ enum AssetStatus: String, Codable, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
-        case .inUse: return "在用"
-        case .retired: return "报废"
-        case .maintenance: return "维修"
-        case .idle: return "闲置"
+        case .inUse: return NSLocalizedString("在用", comment: "status")
+        case .retired: return NSLocalizedString("报废", comment: "status")
+        case .maintenance: return NSLocalizedString("维修", comment: "status")
+        case .idle: return NSLocalizedString("闲置", comment: "status")
         }
     }
 }
@@ -106,13 +106,13 @@ struct AssetFilter: Equatable {
 
         var title: String {
             switch self {
-            case .registerDateDesc: return "登记时间↓"
-            case .registerDateAsc: return "登记时间↑"
-            case .priceDesc: return "价格↓"
-            case .priceAsc: return "价格↑"
-            case .purchaseDateDesc: return "购买时间↓"
-            case .purchaseDateAsc: return "购买时间↑"
-            case .updatedDesc: return "更新时间↓"
+            case .registerDateDesc: return NSLocalizedString("登记时间↓", comment: "sort")
+            case .registerDateAsc: return NSLocalizedString("登记时间↑", comment: "sort")
+            case .priceDesc: return NSLocalizedString("价格↓", comment: "sort")
+            case .priceAsc: return NSLocalizedString("价格↑", comment: "sort")
+            case .purchaseDateDesc: return NSLocalizedString("购买时间↓", comment: "sort")
+            case .purchaseDateAsc: return NSLocalizedString("购买时间↑", comment: "sort")
+            case .updatedDesc: return NSLocalizedString("更新时间↓", comment: "sort")
             }
         }
     }
